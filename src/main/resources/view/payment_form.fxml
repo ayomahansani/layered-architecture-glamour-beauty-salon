@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paymentForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="1160.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.PaymentFormController">
+    <children>
+      <ImageView fitHeight="652.0" fitWidth="979.0" layoutX="182.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/handsome-man-cutting-beard-barber-salon-1.jpg" />
+         </image>
+      </ImageView>
+        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="1160.0" style="-fx-background-color: black;" text="Payment Form">
+            <font>
+                <Font name="Apple LiSung Light" size="38.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#ff6d60" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Label>
+      <Label layoutX="281.0" layoutY="177.0" opacity="0.8" prefHeight="33.0" prefWidth="218.0" text="Net Total of Appointments" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="89.0" opacity="0.8" prefHeight="22.0" prefWidth="134.0" text="Customer Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerName" focusColor="#d0d0d0" layoutX="281.0" layoutY="121.0" onAction="#cmbCustomerNameOnAction" prefHeight="34.0" prefWidth="270.0" promptText="choose" styleClass="combo-box" stylesheets="@../style/Payment.css" unFocusColor="#ff6d60" />
+      <TableView fx:id="tblPayment" layoutX="20.0" layoutY="388.0" opacity="0.8" prefHeight="172.0" prefWidth="1116.0" style="-fx-border-color: black; -fx-border-width: 3;">
+         <columns>
+            <TableColumn fx:id="colPaymentId" prefWidth="119.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15;" text="Payment  Id" />
+            <TableColumn fx:id="colCustomerName" prefWidth="189.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15;" text="Customer  Name" />
+            <TableColumn fx:id="colPaymentDate" prefWidth="164.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15;" text="Payment  Date" />
+            <TableColumn fx:id="colPaymentTime" prefWidth="169.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15;" text="Payment  Time" />
+            <TableColumn fx:id="colAppointmentAmount" prefWidth="168.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15;" text="Appointment's  Amount" />
+            <TableColumn fx:id="colOrderAmount" prefWidth="149.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15;" text="Order's  Amount" />
+            <TableColumn fx:id="colTotalAmount" prefWidth="149.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15;" text="Total  Amount" />
+         </columns>
+      </TableView>
+      <Label layoutX="281.0" layoutY="269.0" opacity="0.8" prefHeight="33.0" prefWidth="146.0" text="Net Total of Orders" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="183.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Payment Date :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="276.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Payment Time :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnPayment" layoutX="977.0" layoutY="588.0" mnemonicParsing="false" onAction="#btnPaymentOnAction" opacity="0.8" prefHeight="40.0" prefWidth="153.0" style="-fx-background-color: FF6D60;" text="Confirmed" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9c7" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <Label layoutX="65.0" layoutY="90.0" opacity="0.8" prefHeight="22.0" prefWidth="99.0" text="Payment Id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPaymentId" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="123.0" opacity="0.8" prefHeight="37.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPaymentDate" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="220.0" opacity="0.8" prefHeight="37.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPaymentTime" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="315.0" opacity="0.8" prefHeight="37.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAppointmentAmount" layoutX="281.0" layoutY="217.0" opacity="0.8" prefHeight="37.0" prefWidth="195.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderAmount" layoutX="281.0" layoutY="314.0" opacity="0.8" prefHeight="37.0" prefWidth="195.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnPaymentInvoice" layoutX="38.0" layoutY="588.0" mnemonicParsing="false" onAction="#btnPaymentInvoiceOnAction" opacity="0.8" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: FF6D60;" text="Invoice" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnTotalAmount" layoutX="1021.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnTotalAmountOnAction" opacity="0.8" prefHeight="34.0" prefWidth="99.0" style="-fx-background-color: FF6D60;" text="Sum" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnAllPayment" layoutX="205.0" layoutY="591.0" mnemonicParsing="false" onAction="#btnAllPaymentOnAction" opacity="0.8" prefHeight="37.0" prefWidth="128.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

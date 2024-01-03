@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="all_products_details" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bed67c8a-b31f-4bbe-94b3-3c36d5ec57bb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from product;]]>
+	</queryString>
+	<field name="pr_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pr_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="pr_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="pr_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pr_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="pr_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="pr_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pr_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="pr_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="pr_unit_price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="pr_unit_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="pr_unit_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<field name="pr_qty_on_hand" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="pr_qty_on_hand"/>
+		<property name="com.jaspersoft.studio.field.label" value="pr_qty_on_hand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+	</field>
+	<group name="pr_id">
+		<groupExpression><![CDATA[$F{pr_id}]]></groupExpression>
+	</group>
+	<group name="pr_name">
+		<groupExpression><![CDATA[$F{pr_name}]]></groupExpression>
+	</group>
+	<group name="pr_type">
+		<groupExpression><![CDATA[$F{pr_type}]]></groupExpression>
+	</group>
+	<group name="pr_unit_price">
+		<groupExpression><![CDATA[$F{pr_unit_price}]]></groupExpression>
+	</group>
+	<group name="pr_qty_on_hand">
+		<groupExpression><![CDATA[$F{pr_qty_on_hand}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement x="231" y="10" width="400" height="59" uuid="6af6674e-348f-42eb-a575-9d93d44fbd51"/>
+				<textElement>
+					<font fontName="Arial Black" size="32"/>
+				</textElement>
+				<text><![CDATA[PRODUCTS   DETAILS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="231" y="60" width="383" height="1" uuid="296d822d-13ce-4cab-b2e2-8c15394d2a77"/>
+				<graphicElement>
+					<pen lineWidth="8.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="700" y="-1" width="80" height="81" uuid="e73baec0-d3de-4892-be1c-230a16b361f8"/>
+				<graphicElement>
+					<pen lineWidth="10.0"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="710" y="10" width="81" height="80" forecolor="#FF7063" backcolor="#FF7063" uuid="945354e9-74a3-4a3f-ae47-d2ef6d5fa03b"/>
+			</rectangle>
+			<image>
+				<reportElement x="700" y="0" width="80" height="80" uuid="ceecb71a-6c1e-4991-84ad-c3ed8140bdd9"/>
+				<imageExpression><![CDATA["/Users/ayomahansani/Downloads/glamour-beauty-salon/src/main/resources/img/34128854_76_long_hair_woman.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="640" y="10" width="94" height="30" uuid="34f4bfb8-8fb7-46d2-a4ac-38d5e90c3531">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2cf37929-9ede-4ae1-b4c4-cf6504736998"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit_Price]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="54" width="802" height="1" uuid="0bbe111c-2479-41e9-bc2e-1ee906cdcade"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="761" y="10" width="40" height="30" uuid="3aad2dde-fd44-4e55-97ea-6eaa1e11c889">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b32f7695-104e-4c44-a84d-5652e8a70cfa"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="10" width="50" height="30" uuid="f71aec39-ef09-4180-b1cb-63e3036d70f6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a9f56eb-e665-4a56-a1aa-eaa1fc5050b3"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="10" width="100" height="30" uuid="9fd3538a-db9b-4c5f-a35d-9a08bcd115f6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b19ef9-9c5d-435d-bf5a-cfcb9aa11bfc"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="520" y="10" width="70" height="30" uuid="97e3c759-83ee-4bdd-a519-4d30cfa7af7c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b19ef9-9c5d-435d-bf5a-cfcb9aa11bfc"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="58" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="10" width="60" height="30" uuid="0438faed-4641-4b92-9afe-987d1bd2eab9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="45704562-4c45-4aaf-bd6c-f1d46a6dfcf2"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pr_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="10" width="440" height="30" uuid="63c4abf5-d5d5-415e-ab54-c92d6291637d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f2bb028-5f96-427f-9c15-6644ab5a3d77"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pr_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="10" width="134" height="30" uuid="f140591a-15c1-40b8-92e7-d30627dd1d58">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59a39fd1-622b-4146-87e8-146096221496"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pr_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="654" y="10" width="100" height="30" uuid="c13618d9-e90c-4903-a8c3-30c27f7aea16">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b5a0577-3487-4ccc-8a8c-8d8df4f3869f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pr_unit_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="764" y="10" width="38" height="30" uuid="cc265c1c-d6dd-4407-95cc-8c457636fa36">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6c42c548-9069-4fc5-8711-dd8499dcc1f1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pr_qty_on_hand}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

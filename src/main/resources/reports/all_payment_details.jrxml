@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="all_payment_details" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="73f645a5-73e0-400f-b179-305d2b6895b1">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from payment p join customer c on p.cus_id=c.cus_id;]]>
+	</queryString>
+	<field name="pay_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pay_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="pay_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="cus_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cus_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="cus_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="cus_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cus_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="cus_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="pay_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="pay_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="pay_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="pay_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="pay_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="pay_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="pay_time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pay_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="pay_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<group name="pay_id">
+		<groupExpression><![CDATA[$F{pay_id}]]></groupExpression>
+	</group>
+	<group name="cus_id">
+		<groupExpression><![CDATA[$F{cus_id}]]></groupExpression>
+	</group>
+	<group name="cus_name">
+		<groupExpression><![CDATA[$F{cus_name}]]></groupExpression>
+	</group>
+	<group name="pay_amount">
+		<groupExpression><![CDATA[$F{pay_amount}]]></groupExpression>
+	</group>
+	<group name="pay_date">
+		<groupExpression><![CDATA[$F{pay_date}]]></groupExpression>
+	</group>
+	<group name="pay_time">
+		<groupExpression><![CDATA[$F{pay_time}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="16" width="370" height="59" uuid="1f22416f-6a5a-4531-8cef-2f3bcade2cec"/>
+				<textElement>
+					<font fontName="Arial Black" size="32"/>
+				</textElement>
+				<text><![CDATA[PAYMENT   DETAILS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="216" y="63" width="364" height="1" uuid="d4393e23-6e9d-414f-ae57-de9df3087e34"/>
+				<graphicElement>
+					<pen lineWidth="8.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="700" y="-1" width="80" height="81" uuid="f41c4fac-325c-425f-9a81-6b7e89d53d46"/>
+				<graphicElement>
+					<pen lineWidth="10.0"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="710" y="10" width="81" height="80" forecolor="#FF7063" backcolor="#FF7063" uuid="ce45c16c-8cca-49a1-9b33-8259d54d5f45"/>
+			</rectangle>
+			<image>
+				<reportElement x="700" y="0" width="80" height="80" uuid="5160ab2e-527f-43ab-9f47-dd54bb741d22"/>
+				<imageExpression><![CDATA["/Users/ayomahansani/Downloads/glamour-beauty-salon/src/main/resources/img/34128854_76_long_hair_woman.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="4" width="100" height="30" uuid="4f30091d-0aa1-4d82-bc22-9dcdaee46484">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1acd8fe0-42c8-43de-b5bf-74217ae72d2f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pay_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="4" width="100" height="30" uuid="f6f19cdb-0c11-4435-8f9d-8f8cc99c0847">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a9f56eb-e665-4a56-a1aa-eaa1fc5050b3"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cus_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="4" width="100" height="30" uuid="39670380-1968-4d7e-99bd-9ed6b54bb7e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b19ef9-9c5d-435d-bf5a-cfcb9aa11bfc"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="4" width="100" height="30" uuid="591f3d0c-7003-4776-bbf4-6a65819eceb5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b32f7695-104e-4c44-a84d-5652e8a70cfa"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="573" y="4" width="100" height="30" uuid="c9b868b9-b403-4cbd-9f31-af252b526fb5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2cf37929-9ede-4ae1-b4c4-cf6504736998"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="693" y="4" width="87" height="30" uuid="fe7448e4-369c-4692-9653-ac2f8bdc3880">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="495a9c35-c9ba-4247-9dff-dad0fae377d1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="47" width="782" height="1" uuid="3a0a2624-e862-41e0-b9a5-7724f0bec21e"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="37" y="3" width="100" height="30" uuid="6ae0da4b-3ccb-4593-8f39-04c25b85777f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1acd8fe0-42c8-43de-b5bf-74217ae72d2f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pay_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="3" width="66" height="30" uuid="06d4f01e-6c65-4947-9927-3f3aa9116ff4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a9f56eb-e665-4a56-a1aa-eaa1fc5050b3"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="3" width="203" height="30" uuid="19e93718-4c7a-42fb-bec0-38d4e57e94e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b19ef9-9c5d-435d-bf5a-cfcb9aa11bfc"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cus_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="3" width="100" height="30" uuid="efd31185-c179-46be-b48c-dcbfccf53aa3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b32f7695-104e-4c44-a84d-5652e8a70cfa"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pay_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="3" width="97" height="30" uuid="714f481e-95e8-4af7-9303-5ab7d0db145a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2cf37929-9ede-4ae1-b4c4-cf6504736998"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pay_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="690" y="5" width="87" height="30" uuid="eefe91a3-4923-41b6-bebd-2de0bbeaf1c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="495a9c35-c9ba-4247-9dff-dad0fae377d1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pay_time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

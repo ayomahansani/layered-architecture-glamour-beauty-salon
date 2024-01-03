@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="all_appointment_details" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea58b8d7-9631-487b-a68f-72cb02408f3f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from appointment a join customer c on a.cus_id=c.cus_id order by app_id;]]>
+	</queryString>
+	<field name="app_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="app_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="app_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="cus_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cus_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="cus_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="cus_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cus_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="cus_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="app_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="app_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="app_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="app_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="app_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="app_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="app_time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="app_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="app_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<group name="app_id">
+		<groupExpression><![CDATA[$F{app_id}]]></groupExpression>
+	</group>
+	<group name="cus_id">
+		<groupExpression><![CDATA[$F{cus_id}]]></groupExpression>
+	</group>
+	<group name="cus_name">
+		<groupExpression><![CDATA[$F{cus_name}]]></groupExpression>
+	</group>
+	<group name="app_amount">
+		<groupExpression><![CDATA[$F{app_amount}]]></groupExpression>
+	</group>
+	<group name="app_date">
+		<groupExpression><![CDATA[$F{app_date}]]></groupExpression>
+	</group>
+	<group name="app_time">
+		<groupExpression><![CDATA[$F{app_time}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<line>
+				<reportElement x="174" y="70" width="470" height="1" uuid="3fe442fe-43b2-461a-b4cf-085a249c8a39"/>
+				<graphicElement>
+					<pen lineWidth="8.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="170" y="16" width="479" height="59" uuid="39e53c37-000f-4285-9162-4dbf451840c0"/>
+				<textElement>
+					<font fontName="Arial Black" size="32"/>
+				</textElement>
+				<text><![CDATA[APPOINTMENTS   DETAILS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="700" y="-1" width="80" height="81" uuid="8e29ed42-818c-43a6-8980-3bac89dccb8d"/>
+				<graphicElement>
+					<pen lineWidth="10.0"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="710" y="10" width="81" height="80" forecolor="#FF7063" backcolor="#FF7063" uuid="68fec5a4-6c07-4f94-9cec-f62f6a25b39e"/>
+			</rectangle>
+			<image>
+				<reportElement x="700" y="0" width="80" height="80" uuid="b2314b2c-6e79-4e9e-810b-4bfd2b514ec5"/>
+				<imageExpression><![CDATA["/Users/ayomahansani/Downloads/glamour-beauty-salon/src/main/resources/img/34128854_76_long_hair_woman.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="10" y="47" width="782" height="1" uuid="373a8e94-d8b9-4fc3-ac8d-5982e22c3752"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="432" y="4" width="100" height="30" uuid="ff3f8636-57c7-4b4d-bd20-420df66808ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b32f7695-104e-4c44-a84d-5652e8a70cfa"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="4" width="100" height="30" uuid="1157a508-4e3e-4de0-bd7c-cfb02719a7d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a9f56eb-e665-4a56-a1aa-eaa1fc5050b3"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cus_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="577" y="4" width="100" height="30" uuid="6d28637b-e4ed-4a98-83ea-c0620762365b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2cf37929-9ede-4ae1-b4c4-cf6504736998"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="697" y="4" width="87" height="30" uuid="f8f054a4-fb06-4081-8948-9eca7b93e663">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="495a9c35-c9ba-4247-9dff-dad0fae377d1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="4" width="100" height="30" uuid="251c6431-0a2d-4644-9afe-a20084ecb84a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1acd8fe0-42c8-43de-b5bf-74217ae72d2f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[App_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="4" width="100" height="30" uuid="81a98f24-5e0b-4648-af15-8e6f3b048341">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b19ef9-9c5d-435d-bf5a-cfcb9aa11bfc"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="11" width="100" height="30" uuid="063f51e0-0b1d-435d-a9a0-c36f6f64bb30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="04d5ddd8-7b84-4f68-ba16-125449cf5234"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{app_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="10" width="72" height="30" uuid="589cee18-32f1-4621-bc41-e58e40e7d309">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a7b4a49d-f6ca-4e12-be76-065147922d67"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="10" width="186" height="30" uuid="e41a534d-6e02-4531-b84f-eebc968acf41">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a0a3877-ed25-46ad-b263-1b53f0c1c1de"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cus_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="10" width="100" height="30" uuid="b84e2635-8a1b-4e94-b0db-7ed796b3ebcb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="32da54cd-cf28-42ac-8cb5-07148ccc25a1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{app_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="554" y="10" width="100" height="30" uuid="0a077c06-e240-4d4c-821e-5543d7f7e262">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0631e6e1-384f-453f-9a7a-786043dde4ae"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{app_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="690" y="10" width="100" height="30" uuid="a2a3c84f-a39e-4b63-adc0-0148b2c754a4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2d1d455-517e-4810-810a-31aad5251170"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{app_time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

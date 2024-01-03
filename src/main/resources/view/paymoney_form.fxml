@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="payMoneyForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="500.0" style="-fx-background-color: black; -fx-border-color: FF6D60; -fx-border-width: 9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.PaymoneyFormController">
+   <children>
+      <ImageView fitHeight="284.0" fitWidth="426.0" layoutX="37.0" layoutY="35.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/beautiful-woman-with-curls-makeup-3.jpg" />
+         </image>
+         <effect>
+            <DropShadow color="WHITE" height="63.5" radius="31.25" spread="0.37" width="63.5" />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblFullAmount" alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="68.0" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: black;" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#45414182" height="14.93" offsetX="7.0" offsetY="7.0" radius="6.965" width="14.93" />
+         </effect>
+      </Label>
+      <Label layoutX="73.0" layoutY="149.0" prefHeight="36.0" prefWidth="103.0" text="Cash :" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCashAmount" alignment="CENTER" layoutX="248.0" layoutY="147.0" onAction="#txtCashAmountOnAction" prefHeight="36.0" prefWidth="161.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#07070780" height="14.93" offsetX="7.0" offsetY="7.0" radius="6.965" width="14.93" />
+         </effect>
+      </TextField>
+      <Label fx:id="lblBalance" alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="234.0" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: black;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#45414180" height="14.93" offsetX="7.0" offsetY="7.0" radius="6.965" width="14.93" />
+         </effect>
+      </Label>
+      <Label layoutX="73.0" layoutY="236.0" prefHeight="36.0" prefWidth="122.0" text="Balance :" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="70.0" prefHeight="36.0" prefWidth="122.0" text="Amount :" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

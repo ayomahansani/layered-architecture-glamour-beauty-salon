@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="1160.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.PlaceOrderFormController">
+    <children>
+      <ImageView fitHeight="652.0" fitWidth="812.0" layoutX="348.0" layoutY="3.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/woman-oriental-makeup-with-rich-eye-punctuation-2.jpg" />
+         </image>
+      </ImageView>
+        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="1160.0" style="-fx-background-color: black;" text="  Place Order Form">
+            <font>
+                <Font name="Apple LiSung Light" size="38.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#ff6d60" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Label>
+      <TableView fx:id="tblOrderCart" layoutX="346.0" layoutY="486.0" opacity="0.8" prefHeight="155.0" prefWidth="807.0" style="-fx-border-color: black; -fx-border-width: 3;">
+         <columns>
+            <TableColumn fx:id="colProductCode" prefWidth="75.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15; -fx-background-color: white;" text="Code" />
+            <TableColumn fx:id="colName" prefWidth="334.06658935546875" style="-fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15; -fx-background-color: white;" text="Name" />
+            <TableColumn fx:id="colQty" prefWidth="63.93341064453125" style="-fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15; -fx-background-color: white;" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="109.6573486328125" style="-fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15; -fx-background-color: white;" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="112.62286376953125" style="-fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15; -fx-background-color: white;" text="Total" />
+            <TableColumn fx:id="colAction" prefWidth="100.31304931640625" style="-fx-border-color: black; -fx-border-width: 1; -fx-font-size: 15; -fx-background-color: white;" text="Action" />
+         </columns>
+      </TableView>
+      <Label layoutX="877.0" layoutY="144.0" opacity="0.8" prefHeight="22.0" prefWidth="97.0" text="Order Date :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDate" alignment="CENTER" layoutX="988.0" layoutY="143.0" opacity="0.8" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="32.0" layoutX="1094.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnAddToCart" layoutX="132.0" layoutY="573.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" opacity="0.8" prefHeight="32.0" prefWidth="186.0" style="-fx-background-color: FF6D60;" text="+ Add " textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnPlaceOrder" layoutX="927.0" layoutY="430.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" opacity="0.8" prefHeight="37.0" prefWidth="206.0" style="-fx-background-color: FF6D60;" text="Confirmed" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9c7" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <Label layoutX="877.0" layoutY="86.0" opacity="0.8" prefHeight="22.0" prefWidth="71.0" text="Order Id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" alignment="CENTER" layoutX="988.0" layoutY="82.0" opacity="0.8" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1005.0" layoutY="314.0" opacity="0.8" prefHeight="28.0" prefWidth="107.0" style="-fx-background-color: black;" text=" Total Amount" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" alignment="CENTER" layoutX="1001.0" layoutY="356.0" opacity="0.8" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER" textFill="#2f2929">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="55.0" opacity="0.8" prefHeight="22.0" prefWidth="134.0" text="Customer  Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerName" layoutX="34.0" layoutY="89.0" opacity="0.97" prefHeight="34.0" prefWidth="199.0" promptText="choose" style="-jfx-unfocus-color: FF6D60; -jfx-focus-color: #d0d0d0;" stylesheets="@../style/PlaceOrder.css" />
+      <Label layoutX="36.0" layoutY="145.0" opacity="0.8" prefHeight="22.0" prefWidth="128.0" text="Product Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbProductName" layoutX="36.0" layoutY="183.0" onAction="#cmbProductOnAction" opacity="0.97" prefHeight="34.0" prefWidth="307.0" promptText="choose" style="-jfx-focus-color: #d0d0d0; -jfx-unfocus-color: FF6D60;" stylesheets="@../style/PlaceOrder.css" unFocusColor="#d0b6b6" />
+      <Label layoutX="36.0" layoutY="245.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Product Code :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCode" layoutX="36.0" layoutY="282.0" opacity="0.8" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="335.0" opacity="0.8" prefHeight="22.0" prefWidth="97.0" text="Unit Price :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUnitPrice" layoutX="33.0" layoutY="372.0" opacity="0.8" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="426.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Qty On Hand :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQtyOnHand" layoutX="37.0" layoutY="459.0" opacity="0.8" prefHeight="34.0" prefWidth="59.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="536.0" opacity="0.8" prefHeight="22.0" prefWidth="59.0" text="Qty :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <TextField fx:id="txtQty" alignment="CENTER" layoutX="35.0" layoutY="570.0" onAction="#txtQtyOnAction" opacity="0.8" prefHeight="38.0" prefWidth="59.0" style="-fx-background-color: white; -fx-border-width: 3;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffffff9b" height="8.86" offsetX="5.0" offsetY="5.0" radius="3.9299999999999997" width="8.86" />
+         </effect>
+      </TextField>
+      <Button fx:id="btnNewCustomer" layoutX="249.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnNewCustomerOnAction" opacity="0.8" prefHeight="34.0" prefWidth="71.0" style="-fx-background-color: FF6D60;" text="+ New" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <Label fx:id="lblProductAvailable" layoutX="158.0" layoutY="144.0" prefHeight="24.0" prefWidth="229.0" textFill="#ff6d6d">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

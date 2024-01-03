@@ -1,0 +1,10 @@
+.combo-box {
+    -fx-background-color: #d6d4d4;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+    -fx-font-size: 17;
+    -fx-font-family: "System Bold";
+}
+
+
+

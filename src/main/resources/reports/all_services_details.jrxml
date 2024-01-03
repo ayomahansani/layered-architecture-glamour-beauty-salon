@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="all_services_details" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c2fc33b0-2a9f-4f9f-84e2-492660449014">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from service;]]>
+	</queryString>
+	<field name="ser_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ser_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="ser_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="ser_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ser_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="ser_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="ser_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ser_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="ser_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="ser_unit_price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="ser_unit_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="ser_unit_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<group name="ser_id">
+		<groupExpression><![CDATA[$F{ser_id}]]></groupExpression>
+	</group>
+	<group name="ser_name">
+		<groupExpression><![CDATA[$F{ser_name}]]></groupExpression>
+	</group>
+	<group name="ser_type">
+		<groupExpression><![CDATA[$F{ser_type}]]></groupExpression>
+	</group>
+	<group name="ser_unit_price">
+		<groupExpression><![CDATA[$F{ser_unit_price}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<line>
+				<reportElement x="191" y="60" width="379" height="1" uuid="5b80f69e-1241-4887-a917-8a9d8bf4f6a8"/>
+				<graphicElement>
+					<pen lineWidth="8.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="191" y="13" width="379" height="59" uuid="f78444df-9e37-40cb-b39f-3a538341144b"/>
+				<textElement>
+					<font fontName="Arial Black" size="32"/>
+				</textElement>
+				<text><![CDATA[SERVICES   DETAILS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="700" y="-1" width="80" height="81" uuid="15470c03-db7f-47af-83a1-a78f4583885f"/>
+				<graphicElement>
+					<pen lineWidth="10.0"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="710" y="10" width="81" height="80" forecolor="#FF7063" backcolor="#FF7063" uuid="43b5fc22-4b7e-47e4-8f8c-25b3973b980d"/>
+			</rectangle>
+			<image>
+				<reportElement x="700" y="0" width="80" height="80" uuid="0cc3fc5a-4dcf-415e-a203-1c37b3e4d70b"/>
+				<imageExpression><![CDATA["/Users/ayomahansani/Downloads/glamour-beauty-salon/src/main/resources/img/34128854_76_long_hair_woman.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="26" y="50" width="736" height="4" uuid="ed2703cd-f053-45b9-8ee2-f8ef40886c7d"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="66" y="6" width="50" height="30" uuid="d5dad6b2-feaa-4972-840b-4f5966d6c5ea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a9f56eb-e665-4a56-a1aa-eaa1fc5050b3"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="6" width="100" height="30" uuid="c5a52173-3490-42d5-a9d3-b7f5462c4718">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b32f7695-104e-4c44-a84d-5652e8a70cfa"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="6" width="100" height="30" uuid="9c44bd9a-06f7-41b5-8155-4954e484ee9c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b19ef9-9c5d-435d-bf5a-cfcb9aa11bfc"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="646" y="6" width="94" height="30" uuid="9c697c11-634b-4670-bb5c-23e7fb9ea1a5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2cf37929-9ede-4ae1-b4c4-cf6504736998"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit_Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="56" y="10" width="70" height="30" uuid="a1ef2d4d-29b5-4e51-a88a-41025c0b2ab8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd5429fe-e4c9-419d-a544-21c9ced637d9"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ser_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="10" width="240" height="30" uuid="fadba88d-ad1d-44ce-b9f9-c59f76c0889e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="15e84d8a-e115-42cb-a94c-94cb68c2aea2"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ser_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="10" width="220" height="30" uuid="14117739-1dee-4145-9d67-a16b6739134f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59612f0a-77d6-477f-8396-a36bbaa2479a"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ser_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="655" y="10" width="100" height="30" uuid="32712447-9342-4404-815d-c0d63cf7589e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="94cdc6e3-c14e-4496-8f1f-ae0cd2e40b05"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ser_unit_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

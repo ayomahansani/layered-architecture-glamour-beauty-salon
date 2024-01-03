@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="dashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="1160.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.DashboardFormController">
+    <children>
+      <ImageView fitHeight="652.0" fitWidth="1029.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/beautiful-woman-with-curls-makeup.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="1012.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home / Dashboard" wrappingWidth="133.9999967366457">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="534.0" fitWidth="541.0" layoutX="592.0" layoutY="67.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/beautiful-woman-with-curls-makeup-2.jpg" />
+         </image>
+         <effect>
+            <DropShadow color="#fffdfd" height="54.39" radius="26.695" width="54.39" />
+         </effect>
+      </ImageView>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="624.0" layoutY="95.0" mnemonicParsing="false" onAction="#goAppointmentsPageOnAction" opacity="0.82" prefHeight="127.0" prefWidth="210.0" style="-fx-background-color: FF6D60;" text="Appointments" textAlignment="RIGHT" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" offsetX="7.0" offsetY="7.0" />
+         </effect>
+      </Button>
+      <Label fx:id="lblNoOfAppointments" alignment="CENTER" layoutX="708.0" layoutY="102.0" opacity="0.69" prefHeight="37.0" prefWidth="42.0" style="-fx-background-color: black; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="29.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="888.0" layoutY="95.0" mnemonicParsing="false" onAction="#goOrdersPageOnAction" opacity="0.82" prefHeight="127.0" prefWidth="210.0" style="-fx-background-color: FF6D60;" text="Orders" textAlignment="RIGHT" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow color="#fffafa" offsetX="7.0" offsetY="7.0" />
+         </effect>
+      </Button>
+      <Label fx:id="lblNoOfOrders" alignment="CENTER" layoutX="972.0" layoutY="103.0" opacity="0.69" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="624.0" layoutY="273.0" mnemonicParsing="false" onAction="#goServicesPageOnAction" opacity="0.81" prefHeight="127.0" prefWidth="210.0" style="-fx-background-color: FF6D60;" text="Services" textAlignment="RIGHT" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" offsetX="7.0" offsetY="7.0" />
+         </effect>
+      </Button>
+      <Label fx:id="lblNoOfServices" alignment="CENTER" layoutX="708.0" layoutY="283.0" opacity="0.69" prefHeight="37.0" prefWidth="42.0" style="-fx-background-color: black; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="29.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="888.0" layoutY="273.0" mnemonicParsing="false" onAction="#goCosmeticProductsPageOnAction" opacity="0.82" prefHeight="127.0" prefWidth="210.0" style="-fx-background-color: FF6D60;" text="Cosmetic Products" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" offsetX="7.0" offsetY="7.0" />
+         </effect>
+      </Button>
+      <Label fx:id="lblNoOfProducts" alignment="CENTER" layoutX="972.0" layoutY="283.0" opacity="0.69" prefHeight="37.0" prefWidth="42.0" style="-fx-background-color: black; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="29.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="624.0" layoutY="447.0" mnemonicParsing="false" onAction="#goCustomersPageOnAction" opacity="0.82" prefHeight="127.0" prefWidth="210.0" style="-fx-background-color: FF6D60;" text="Happy Customers" textAlignment="RIGHT" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" offsetX="7.0" offsetY="7.0" />
+         </effect>
+      </Button>
+      <Label fx:id="lblNoOfCustomers" alignment="CENTER" layoutX="708.0" layoutY="457.0" opacity="0.69" prefHeight="37.0" prefWidth="42.0" style="-fx-background-color: black; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="29.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="888.0" layoutY="447.0" mnemonicParsing="false" onAction="#goStaffPageOnAction" opacity="0.82" prefHeight="127.0" prefWidth="210.0" style="-fx-background-color: FF6D60;" text="Staff" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" offsetX="7.0" offsetY="7.0" />
+         </effect>
+      </Button>
+      <Label fx:id="lblNoOfStaff" alignment="CENTER" layoutX="974.0" layoutY="460.0" opacity="0.69" prefHeight="37.0" prefWidth="42.0" style="-fx-background-color: black; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="29.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Button layoutX="687.0" layoutY="192.0" mnemonicParsing="false" onAction="#appointmentsViewOnAction" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true" />
+      <Button layoutX="951.0" layoutY="192.0" mnemonicParsing="false" onAction="#ordersViewOnAction" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true" />
+      <Button layoutX="687.0" layoutY="370.0" mnemonicParsing="false" onAction="#servicesViewOnAction" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true" />
+      <Button layoutX="951.0" layoutY="370.0" mnemonicParsing="false" onAction="#cosmeticProductsViewOnAction" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true" />
+      <Button layoutX="687.0" layoutY="543.0" mnemonicParsing="false" onAction="#customersViewOnAction" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true" />
+      <Button layoutX="951.0" layoutY="543.0" mnemonicParsing="false" onAction="#staffViewOnAction" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true" />
+    </children>
+</AnchorPane>

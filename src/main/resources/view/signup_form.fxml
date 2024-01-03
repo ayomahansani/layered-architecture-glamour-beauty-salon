@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="signuppage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="849.0" prefWidth="1438.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.SignupFormController">
+    <children>
+      <ImageView fitHeight="849.0" fitWidth="1275.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/beautiful-woman-with-curls-makeup.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane layoutX="838.0" layoutY="-1.0" prefHeight="849.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 0;">
+            <children>
+            <TextField fx:id="txtFullName" layoutX="122.0" layoutY="260.0" onAction="#txtFullNameOnAction" prefHeight="37.0" prefWidth="342.0" promptText="Full Name" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#44414180" height="14.93" offsetX="7.0" offsetY="7.0" radius="6.965" width="14.93" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtEmail" layoutX="122.0" layoutY="368.0" onAction="#txtEmailOnAction" prefHeight="37.0" prefWidth="342.0" promptText="Email" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#44414180" height="14.93" offsetX="7.0" offsetY="7.0" radius="6.965" width="14.93" />
+               </effect>
+            </TextField>
+                <TextField fx:id="txtPassword" layoutX="122.0" layoutY="472.0" onAction="#txtPasswordOnAction" prefHeight="37.0" prefWidth="342.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+               <effect>
+                  <DropShadow color="#44414180" height="14.93" offsetX="7.0" offsetY="7.0" radius="6.965" width="14.93" />
+               </effect>
+                </TextField>
+                <Button fx:id="btnSignup" layoutX="220.0" layoutY="585.0" mnemonicParsing="false" onAction="#btnSignupOnAction" prefHeight="47.0" prefWidth="178.0" style="-fx-background-color: FF6D60;" text="Create Account" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+               <effect>
+                  <DropShadow color="#44414180" height="15.81" offsetX="7.0" offsetY="7.0" radius="7.2475000000000005" width="15.18" />
+               </effect>
+                </Button>
+                <Label alignment="CENTER" layoutX="52.0" layoutY="75.0" prefHeight="81.0" prefWidth="497.0" style="-fx-background-color: FF6D60; -fx-background-radius: 0;" text="Sign Up" textAlignment="CENTER" textFill="#2b292a">
+                    <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+                <Text fill="#0a0a0a" fontSmoothingType="LCD" layoutX="98.0" layoutY="718.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" wrappingWidth="194.99999877810478">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Button layoutX="367.0" layoutY="694.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: white; -fx-background-radius: 3;" text="Login here" textFill="#505cc6" underline="true">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="431.0" layoutY="268.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/username.jpeg" />
+               </image></ImageView>
+                <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="431.0" layoutY="376.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/email.jpeg" />
+               </image></ImageView>
+            <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="433.0" layoutY="480.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/password.jpeg" />
+               </image></ImageView>
+            <Label layoutX="132.0" layoutY="228.0" prefHeight="24.0" prefWidth="178.0" text="Enter your full name :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="336.0" prefHeight="24.0" prefWidth="178.0" text="Enter your email :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="442.0" prefHeight="24.0" prefWidth="178.0" text="Enter your password :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            </children>
+         <effect>
+            <InnerShadow height="94.11" radius="46.555" width="94.11" />
+         </effect>
+        </AnchorPane>
+    </children>
+</AnchorPane>

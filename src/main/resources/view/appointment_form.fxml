@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="appointmentForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="1160.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.AppointmentFormController">
+    <children>
+      <ImageView fitHeight="652.0" fitWidth="989.0" layoutX="171.0" layoutY="1.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/beautiful-model-with-long-eyelashes-glowing-eye-shadow.jpg" />
+         </image>
+      </ImageView>
+        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="1160.0" style="-fx-background-color: black;" text="Appointment Form">
+            <font>
+                <Font name="Apple LiSung Light" size="38.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="0.28378378378378377" />
+                  <Stop color="#ff6b61" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Label>
+      <TableView fx:id="tblAppointments" layoutX="25.0" layoutY="382.0" opacity="0.8" prefHeight="192.0" prefWidth="1109.0" style="-fx-border-color: black; -fx-border-width: 3;">
+        <columns>
+          <TableColumn fx:id="colServiceId" prefWidth="123.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-font-size: 15;" text="Service Id" />
+            <TableColumn fx:id="colServiceName" prefWidth="589.9999847412109" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-font-size: 15;" text="Service Name" />
+            <TableColumn fx:id="colServiceAmount" prefWidth="214.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-font-size: 15;" text="Amount" />
+            <TableColumn fx:id="colAction" prefWidth="173.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-font-size: 15;" text="Action" />
+        </columns>
+      </TableView>
+      <Label layoutX="365.0" layoutY="89.0" opacity="0.8" prefHeight="22.0" prefWidth="142.0" text="Customer Id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerId" alignment="CENTER" layoutX="365.0" layoutY="118.0" opacity="0.8" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerName" focusColor="#d0d0d0" layoutX="42.0" layoutY="116.0" onAction="#cmbCustomerOnAction" prefHeight="34.0" prefWidth="271.0" promptText="  choose" stylesheets="@../style/Appointment.css" unFocusColor="#ff6b61" />
+      <JFXComboBox fx:id="cmbServiceName" focusColor="#d0d0d0" layoutX="42.0" layoutY="203.0" onAction="#cmbServiceNameOnAction" prefHeight="15.0" prefWidth="271.0" promptText="  choose" stylesheets="@../style/Appointment.css" unFocusColor="#ff6d60" />
+      <Label layoutX="43.0" layoutY="177.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Service  Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="365.0" layoutY="177.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Service Id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblServiceId" alignment="CENTER" layoutX="368.0" layoutY="203.0" opacity="0.8" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="568.0" layoutY="177.0" opacity="0.8" prefHeight="22.0" prefWidth="128.0" text="Service Amount :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblServiceAmount" alignment="CENTER" layoutX="568.0" layoutY="203.0" opacity="0.8" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="265.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Staff  Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStaffName" focusColor="#d0d0d0" layoutX="42.0" layoutY="293.0" onAction="#cmbStaffNameOnAction" prefHeight="27.0" prefWidth="271.0" promptText="  choose" stylesheets="@../style/Appointment.css" unFocusColor="#ff6d60" />
+      <Label layoutX="367.0" layoutY="265.0" opacity="0.8" prefHeight="22.0" prefWidth="112.0" text="Staff  Id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStaffId" alignment="CENTER" layoutX="368.0" layoutY="293.0" opacity="0.8" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="870.0" layoutY="192.0" opacity="0.8" prefHeight="22.0" prefWidth="142.0" text="Appointment Time :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="870.0" layoutY="136.0" opacity="0.8" prefHeight="22.0" prefWidth="142.0" text="Appointment Date :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="88.0" opacity="0.8" prefHeight="22.0" prefWidth="128.0" text="Customer Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="870.0" layoutY="78.0" opacity="0.8" prefHeight="22.0" prefWidth="128.0" text="Appointment Id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAppointmentId" alignment="CENTER" layoutX="1018.0" layoutY="73.0" opacity="0.8" prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="600.0" prefHeight="22.0" prefWidth="112.0" text="Total Amount :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" alignment="CENTER" layoutX="134.0" layoutY="595.0" opacity="0.8" prefHeight="32.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnServiceAddToTable" layoutX="982.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnServiceAddToTableOnAction" opacity="0.8" prefHeight="28.0" prefWidth="142.0" style="-fx-background-color: FF6D60;" text="+ Add " textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9" offsetX="5.0" offsetY="5.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnConfirmedAppointment" layoutX="956.0" layoutY="591.0" mnemonicParsing="false" onAction="#btnConfirmedAppointmentOnAction" opacity="0.8" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: FF6D60;" text="Confirmed" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9c7" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <TextField fx:id="appointmentTime" layoutX="1018.0" layoutY="183.0" onAction="#appointmentTimeOnAction" opacity="0.8" prefHeight="34.0" prefWidth="119.0" promptText="type" style="-fx-background-color: white; -fx-border-color: FF6D60; -fx-border-width: 2;" />
+      <Button fx:id="btnNewCustomer" layoutX="251.0" layoutY="75.0" mnemonicParsing="false" onAction="#btnNewCustomerOnAction" opacity="0.8" prefHeight="22.0" prefWidth="62.0" style="-fx-background-color: FF6D60;" text="+ New" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow color="#363535" />
+               </input></DropShadow>
+         </effect>
+      </Button>
+      <DatePicker fx:id="appointmentDate" layoutX="1018.0" layoutY="129.0" onAction="#appointmentDateOnAction" opacity="0.8" prefHeight="34.0" prefWidth="119.0" promptText="select" style="-fx-background-color: #d6d4d4; -fx-border-color: FF6D60; -fx-border-width: 2;" />
+      <Button fx:id="btnAllAppointments" layoutX="454.0" layoutY="593.0" mnemonicParsing="false" onAction="#btnAllAppointmentsOnAction" opacity="0.8" prefHeight="37.0" prefWidth="128.0" style="-fx-background-color: transparent;" text="View more" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblTimeAvailibility" alignment="CENTER" contentDisplay="CENTER" layoutX="809.0" layoutY="223.0" prefHeight="28.0" prefWidth="264.0" textAlignment="CENTER" textFill="#ff6d74">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="670.0" layoutY="255.0" prefHeight="28.0" prefWidth="466.0" textAlignment="CENTER" textFill="#ff6d74">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAppointmentInvoice" layoutX="300.0" layoutY="593.0" mnemonicParsing="false" onAction="#btnAppointmentInvoiceOnAction" opacity="0.8" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: FF6D60;" text="Invoice" textFill="#171717">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffb9b9" offsetX="3.0" offsetY="3.0">
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>
