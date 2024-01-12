@@ -129,4 +129,5 @@ public class AppointmentDAOImpl implements AppointmentDAO {
     public Appointment searchByName(String name) throws SQLException {
         return null;
     }
+
 }
