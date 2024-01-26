@@ -3,7 +3,7 @@ package lk.ijse.salon.dao;
 import lk.ijse.salon.dao.custom.impl.*;
 
 
-public class DAOFactory {   // Using Factory Design Pattern  --> For hide the object creation part
+public class DAOFactory {   // Using Factory Design Pattern  --> For hide the object creation part // And also using Singleton Design Pattern
 
     private static DAOFactory daoFactory;
 

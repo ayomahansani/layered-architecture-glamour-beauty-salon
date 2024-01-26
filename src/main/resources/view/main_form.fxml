@@ -20,7 +20,7 @@
                <font>
                   <Font name="Apple Braille Outline 6 Dot" size="20.0" />
                </font></Label>
-            <Label fx:id="lblTodayDate1" layoutX="320.0" layoutY="25.0" prefHeight="30.0" prefWidth="155.0" text="WEDNESDAY" textFill="WHITE">
+            <Label fx:id="lblTodayDate1" layoutX="320.0" layoutY="25.0" prefHeight="30.0" prefWidth="155.0" text="SUNDAY" textFill="WHITE">
                <font>
                   <Font name="Apple Braille Outline 6 Dot" size="20.0" />
                </font>
