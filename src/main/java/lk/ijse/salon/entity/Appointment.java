@@ -4,8 +4,7 @@ import lk.ijse.salon.tm.AppointmentTm;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class Appointment {
+public class Appointment {  //related to database
 
     private String appointmentId;
     private String customerId;
