@@ -87,6 +87,7 @@ public class ForgotPasswordFormController {
 
                     var dto = new LoginDto(userName, pw);
 
+
                     //boolean isSet = loginDAO.update(dto);
                     boolean isSet = loginBO.updatePassword(dto);  // Using loose coupling
                     if (isSet) {
